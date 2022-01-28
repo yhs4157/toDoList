@@ -1,9 +1,12 @@
 import React from 'react'; 
 import TodoTemplate from './component/TodoTemplate';
+import TodoInsert from './component/TodoInsert';
 
 function App() {
   return (
-    <TodoTemplate>Todo App을 만들자!</TodoTemplate>
+    <TodoTemplate>
+      <TodoInsert />
+    </TodoTemplate>
   );
 }
 
