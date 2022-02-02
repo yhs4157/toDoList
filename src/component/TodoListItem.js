@@ -7,9 +7,9 @@ import {
 import styles from './TodoListItem.module.css';
 import cn from 'classnames'; 
 
-const TodoListItem = ({todo}) => {
-    const {text, checked} = todo; 
-    
+const TodoListItem = ({todo, onRemove}) => {
+    const {id, text, checked} = todo; 
+
     return (
         <div className={styles.TodoListItem}>
             
@@ -18,7 +18,7 @@ const TodoListItem = ({todo}) => {
                 <div className={styles.text}>{text}</div>
             </div>
 
-            <div className={styles.remove}>
+            <div className={styles.remove} onClick={() => onRemove(id)}>
                 <MdRemoveCircleOutline />
             </div>
         </div>
