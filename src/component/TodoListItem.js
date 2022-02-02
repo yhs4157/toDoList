@@ -7,13 +7,13 @@ import {
 import styles from './TodoListItem.module.css';
 import cn from 'classnames'; 
 
-const TodoListItem = ({todo, onRemove}) => {
+const TodoListItem = ({todo, onRemove, onToggle}) => {
     const {id, text, checked} = todo; 
 
     return (
         <div className={styles.TodoListItem}>
             
-            <div className= {cn(styles.checkbox, {[styles.checked]: checked})}>
+            <div className= {cn(styles.checkbox, {[styles.checked]: checked})} onClick = {()=> onToggle(id)}>
                 {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
                 <div className={styles.text}>{text}</div>
             </div>
