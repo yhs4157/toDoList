@@ -26,11 +26,11 @@
   flex: 1;
 }
 
-.checkbox .checked svg {
+.checked svg {
   color: #22b8cf;
 }
 
-.checkbox .checked .text {
+.checked .text {
   color: #adb5bd;
   text-decoration: line-through;
 }

@@ -9,10 +9,11 @@ import cn from 'classnames';
 
 const TodoListItem = ({todo}) => {
     const {text, checked} = todo; 
+    
     return (
         <div className={styles.TodoListItem}>
             
-            <div className= {cn(styles.checkbox, styles.checked)}>
+            <div className= {cn(styles.checkbox, {[styles.checked]: checked})}>
                 {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
                 <div className={styles.text}>{text}</div>
             </div>
