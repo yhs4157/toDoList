@@ -26,11 +26,11 @@
   flex: 1;
 }
 
-.checkbox:checked svg {
+.checkbox .checked svg {
   color: #22b8cf;
 }
 
-.checkbox:checked .text {
+.checkbox .checked .text {
   color: #adb5bd;
   text-decoration: line-through;
 }
@@ -50,4 +50,12 @@
 /*
 & + &인데 무엇을 의미하는 지 모르겠다. 
 sass에서 제공하는 부모 선택자 
+*/
+/*
+.TodoListItem_checkbox__4lE1f {
+    cursor: pointer;
+    flex: 1 1;
+    display: flex;
+    align-items: center;
+}
 */

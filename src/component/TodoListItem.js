@@ -5,14 +5,18 @@ import {
     MdRemoveCircleOutline,
 } from 'react-icons/md';
 import styles from './TodoListItem.module.css';
+import cn from 'classnames'; 
 
-const TodoListItem = () => {
+const TodoListItem = ({todo}) => {
+    const {text, checked} = todo; 
     return (
         <div className={styles.TodoListItem}>
-            <div className={styles.checkbox}>
-                <MdCheckBoxOutlineBlank />
-                <div className={styles.text}>할 일</div>
+            
+            <div className= {cn(styles.checkbox, styles.checked)}>
+                {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
+                <div className={styles.text}>{text}</div>
             </div>
+
             <div className={styles.remove}>
                 <MdRemoveCircleOutline />
             </div>
@@ -21,3 +25,7 @@ const TodoListItem = () => {
 }
 
 export default TodoListItem; 
+
+
+// 15줄 변경하였으나 무엇인지를 모름. <div className={styles.checkbox}>
+// <div className= {cn(checked, {checked})}>
